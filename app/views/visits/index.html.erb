@@ -1,0 +1,6 @@
+<h1>All visits</h1>
+<% @visits.each do |visit| %>
+	<%= visit.id %>
+	<%= visit.user.name %>
+	<%= visit.restaurant.name %> 
+<% end %>

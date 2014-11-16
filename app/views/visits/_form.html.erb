@@ -1,0 +1,16 @@
+<%= form_for(@visit) do |f| %>
+	<div class="field">
+		<%= f.label :user_id %>
+		<%= f.text_field :user_id %>
+	</div>
+	<div class="field">
+		<%= f.label :restaurant_id %>
+		<% users = User.all %>
+		<%= f.select(:restaurant_id,  [['Lisbon', 1], ['Lisbon2', 2]])%>
+		<%= f.select(:restaurant_id,  users)%>
+		
+	</div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
